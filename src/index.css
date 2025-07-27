@@ -1,0 +1,88 @@
+/* index.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===========================
+   🌈 Custom Utility Classes
+   =========================== */
+
+/* Gradient Button without group utility */
+.btn-gradient {
+  @apply relative overflow-hidden bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold py-4 px-6 rounded-lg font-mono;
+}
+
+/* Styled Input Fields */
+.input-field {
+  @apply w-full bg-black/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:border-cyan-400 focus:outline-none font-mono;
+}
+
+/* Frosted Glass Effect Cards */
+.card-glass {
+  @apply border border-cyan-500/20 bg-gradient-to-r from-purple-500/5 to-cyan-500/5 rounded-lg p-6 backdrop-blur-sm;
+}
+
+/* Contact Info Card Style */
+.info-card {
+  @apply bg-black/30 rounded-lg hover:bg-black/50 transition-colors;
+}
+
+/* Gradient Icon Containers */
+.icon-gradient {
+  @apply p-3 rounded-lg bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400;
+}
+
+/* Feature Display Cards */
+.feature-card {
+  @apply bg-black/30 rounded-lg;
+}
+
+/* ===========================
+   💫 Animations
+   =========================== */
+
+/* Orbiting effect (around logo) */
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translate(100px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(100px) rotate(-360deg);
+  }
+}
+
+/* Fade-in + scale entrance effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Slow clockwise ring rotation */
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Slow counterclockwise ring rotation */
+@keyframes spin-reverse {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+/* Tailwind utility extensions */
+.animate-spin-slow {
+  animation: spin 12s linear infinite;
+}
+
+.animate-spin-reverse-slow {
+  animation: spin-reverse 18s linear infinite;
+}
