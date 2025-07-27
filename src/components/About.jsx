@@ -112,11 +112,22 @@ const About = () => {
             {/* Status indicators fixed to bottom */}
             <div className="flex flex-wrap items-center gap-4 pt-6 border-t border-gray-700 mt-6">
               <div className="flex items-center gap-2">
-                <div className="w-3 h-3 bg-green-400 rounded-full animate-ping"></div>
+                <div className="w-3 h-3 bg-green-400 rounded-full animate-ping" />
                 <span className="text-green-400 text-xs font-mono">ACTIVE</span>
               </div>
               <div className="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" className="text-cyan-400">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="text-cyan-400"
+                >
                   <ellipse cx="12" cy="5" rx="9" ry="3" />
                   <path d="M3 5v14a9 3 0 0 0 18 0V5" />
                   <path d="M3 12a9 3 0 0 0 18 0" />
@@ -137,7 +148,9 @@ const About = () => {
             <li className="flex items-start gap-3 bg-black/30 rounded-lg p-4 border border-gray-700 hover:border-purple-500 transition duration-300">
               <FaBook className="text-pink-400 animate-bounce" />
               <div>
-                Published research on <span className="text-pink-400">AI-based Healthcare Systems</span> exploring diagnostic accuracy and patient care enhancement.
+                Published research on{' '}
+                <span className="text-pink-400">AI-based Healthcare Systems</span> exploring
+                diagnostic accuracy and patient care enhancement.
               </div>
             </li>
             <li className="flex items-start gap-3 bg-black/30 rounded-lg p-4 border border-gray-700 hover:border-yellow-500 transition duration-300">
