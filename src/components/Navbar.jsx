@@ -62,7 +62,7 @@ const Navbar = () => {
           <div className="relative">
             <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-xl shadow-[0_0_20px_rgba(23,254,254,0.5)]" />
             <div className="absolute inset-0 w-10 h-10 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-xl animate-pulse opacity-50" />
-            <img className="absolute inset-0 m-auto w-5 h-5" src="/logo.svg" alt="logo" />
+           
           </div>
           <div className="flex flex-col">
             <span className="text-xl md:text-2xl font-mono font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-pulse">
