@@ -7,6 +7,7 @@ import {
   FaEnvelope,
   FaBolt,
   FaBars,
+  FaTimes,
   FaBatteryHalf,
   FaMicrochip,
   FaPlug,
@@ -17,6 +18,7 @@ const Navbar = () => {
   const [batteryLevel, setBatteryLevel] = useState(null);
   const [isCharging, setIsCharging] = useState(false);
   const [cpuLoad, setCpuLoad] = useState(42);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const clock = setInterval(() => setTime(new Date()), 1000);
@@ -115,9 +117,33 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Hamburger */}
-        <button className="md:hidden p-2 text-gray-300 hover:text-cyan-400 transition-colors">
-          <FaBars size={24} />
-        </button>
+        <div className="md:hidden z-50">
+          <button onClick={() => setIsOpen(!isOpen)} className="p-2 text-gray-300 hover:text-cyan-400 transition-colors">
+            {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <div
+        className={`md:hidden fixed top-16 left-0 w-full bg-black/95 backdrop-blur-md px-6 py-8 space-y-6 transform transition-transform duration-300 ${
+          isOpen ? 'translate-x-0' : '-translate-x-full'
+        }`}
+      >
+        {navItems.map((item, index) => (
+          <ScrollLink
+            key={index}
+            to={item.to}
+            smooth={true}
+            duration={500}
+            offset={-60}
+            onClick={() => setIsOpen(false)}
+            className="flex items-center gap-3 text-sm text-gray-200 hover:text-cyan-400 font-mono transition"
+          >
+            {item.icon}
+            {item.name}
+          </ScrollLink>
+        ))}
       </div>
     </header>
   );

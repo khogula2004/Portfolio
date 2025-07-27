@@ -1,0 +1,88 @@
+.loader-container {
+  @apply fixed inset-0 bg-black z-50 flex items-center justify-center flex-col text-white;
+  font-family: 'Courier New', monospace;
+}
+
+.loader-content {
+  @apply text-center relative z-10;
+}
+
+.glow-logo {
+  @apply w-24 h-24 mx-auto mb-4 relative animate-pulse;
+  filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.5));
+}
+
+.logo-img {
+  @apply w-full h-full object-contain;
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+.glow-text {
+  @apply text-3xl md:text-4xl font-bold mb-2 text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-500 bg-clip-text;
+  animation: fadeIn 1s ease-out;
+}
+
+.opt-text {
+  @apply text-gray-400 text-sm font-mono mb-4 tracking-widest;
+}
+
+.progress-container {
+  @apply mt-4 mb-4;
+}
+
+.bar {
+  @apply w-64 h-2 bg-gray-700 rounded-full overflow-hidden mt-2 mx-auto;
+}
+
+.fill {
+  @apply h-full bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full;
+  transition: width 0.2s ease-in-out;
+}
+
+.dots {
+  @apply flex justify-center space-x-2 mt-3;
+}
+
+.dot {
+  @apply w-2 h-2 rounded-full bg-cyan-400 animate-ping;
+  animation-delay: 0.2s;
+}
+
+.binary-background::before {
+  content: '011010001011010011100010001010100101010010101010101001';
+  color: rgba(6, 182, 212, 0.07);
+  font-size: 10px;
+  white-space: pre;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 1.5;
+  z-index: 0;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    rgba(6, 182, 212, 0.05) 1px,
+    transparent 2px
+  );
+  animation: scrollBinary 20s linear infinite;
+}
+
+@keyframes scrollBinary {
+  0% {
+    background-position-y: 0%;
+  }
+  100% {
+    background-position-y: 100%;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(255, 0, 255, 0.3);
+  }
+}
