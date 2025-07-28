@@ -75,7 +75,7 @@ const About = () => {
             <div className="grid gap-4">
               <EduCard icon={<FaBook />} title="B.Tech – CSE (AI/ML)" place="VIT Bhopal University" year="2021 – 2025" />
               <EduCard icon={<FaBook />} title="Class XII" place="Campion Anglo Indian Hr Sec School" year="2020 – 2021" />
-              <EduCard icon={<FaBook />} title="SSLC – State Board" place="Campion Anglo Indian Hr Sec School" year="2018 – 2019" />
+              <EduCard icon={<FaBook />} title="Class X" place="Campion Anglo Indian Hr Sec School" year="2018 – 2019" />
             </div>
           </div>
 
